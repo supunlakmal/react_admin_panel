@@ -1,0 +1,180 @@
+/* -----------------
+Forms
+----------------- */
+
+// BASIC LABEL - Style overrides
+label {
+  display: block;
+}
+
+// BASIC INPUT - Styles for all inputs
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="file"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea,
+select {
+  appearance: none;
+  border: 1px solid $gray;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  height: 45px;
+  outline: none;
+  padding: 10px;
+
+  @include type-custom($color: $black, $font-family: $sans-stack, $font-weight: $font-normal, $font-size: 14px, $line-height: 1.2);
+}
+
+//IE Fix
+select::-ms-expand {
+  display: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  bottom: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  + label {
+    cursor: pointer;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &:before {
+      background: $white;
+      box-shadow: 0 0 0 1px $gray;
+      content: '';
+      height: 1.8rem;
+      left: 0;
+      line-height: 1.8rem;
+      margin-right: 0.6em;
+      margin-top: 0.75rem;
+      position: absolute;
+      text-indent: 0.15em;
+      top: 0;
+      width: 1.8rem;
+    }
+
+    &:after {
+      content: '';
+      height: 1.3rem;
+      left: 0.35rem;
+      position: absolute;
+      top: 0.75rem;
+      transition: all 0.2s;
+      width: 1.9rem;
+    }
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        background-color: $white;
+        box-shadow: 0 0 0 1px $gray;
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  &:not(:checked),
+  &:checked {
+    + label {
+      &:after {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &:focus {
+    + label {
+      &:before {
+        box-shadow: 0 0 0 1px $gray;
+      }
+    }
+  }
+}
+
+// BASIC SELECT - Style overrides
+select {
+  appearance: none;
+  background-color: $white;
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+}
+
+// INPUT FULL WIDTH - Utility used to make inputs full width
+.input-full-width {
+  max-width: none;
+
+  input {
+    max-width: none;
+  }
+}
+
+// INPUT HELP TEXT - Style for help text beneath input or data field
+.help-text {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+// INPUT PLACEHOLDER - Style for placeholder text
+input::placeholder { /* Chrome/Opera/Safari */
+  color: $gray;
+}
+
+button,
+input[type="submit"],
+.button {
+  border: none;
+  cursor: pointer;
+  float: left;
+  height: 45px;
+  outline: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+
+  @include type-custom($color: $gray, $font-family: $headlines, $font-weight: $font-semibold, $font-size: 14px, $line-height: 3.2);
+}
+
+.button--large {
+  height: 50px;
+  min-width: 185px;
+  text-align: center;
+
+  @include type-custom($color: $white, $font-family: $headlines, $font-weight: $font-semibold, $font-size: 18px, $line-height: 2);
+}

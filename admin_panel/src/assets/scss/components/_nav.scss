@@ -1,0 +1,349 @@
+/* Header */
+
+nav {
+  background: rgba($black, 0.85);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  @include grid-media($lg) {
+    height: auto;
+  }
+
+  a {
+    color: $black;
+    font-size: 12px;
+
+    @include grid-media($lg) {
+      font-size: 15px;
+    }
+  }
+
+  &.hb-active {
+    height: 100%;
+    overflow-y: auto;
+
+    @include grid-media($lg) {
+      height: auto;
+      overflow: inherit;
+    }
+  }
+}
+
+.c-nav {
+  @include grid-column(12, $no-gutter);
+
+  position: relative;
+  z-index: 2;
+
+  &.active {
+    background: $red;
+
+    @include grid-media($lg) {
+      background: none;
+    }
+
+    .c-nav__logo {
+      display: none;
+
+      @include grid-media($lg) {
+        display: block;
+      }
+    }
+  }
+
+  &--right {
+    float: right;
+  }
+
+  &--top {
+    display: none;
+    padding: 20px 0;
+
+    @include grid-media($lg) {
+      display: block;
+      float: right;
+    }
+  }
+
+  &--bottom {
+    @include grid-column(12, $no-gutter);
+
+    display: none;
+    padding-bottom: 30px;
+
+    @include grid-media($lg) {
+      background: none;
+      border-top: 2px solid $gray;
+      clear: both;
+      display: block !important;
+      float: right;
+      padding: 0;
+      width: auto;
+    }
+  }
+}
+
+.c-nav__logo {
+  float: left;
+  padding: 5px 0;
+  width: 60%;
+
+  .c-logo__text {
+    margin: 0;
+
+    a {
+      color: $white;
+    }
+  }
+
+  img {
+    max-height: 65px;
+  }
+
+  @include grid-media($lg) {
+    width: auto;
+
+    img {
+      max-height: 88px;
+    }
+  }
+
+  @include grid-media($xl) {
+    padding-top: 10px;
+    width: auto;
+
+    img {
+      max-height: 104px;
+    }
+  }
+}
+
+.c-nav__elements {
+  display: none;
+  float: right;
+  position: relative;
+
+  @include grid-media($lg) {
+    display: block;
+  }
+}
+
+.c-nav__signup-fields {
+  float: left;
+  position: relative;
+}
+
+.c-nav__nav {
+  padding: 0 30px 20px;
+  position: relative;
+
+  @include grid-column(12, $no-gutter);
+
+  @include grid-media($lg) {
+    padding: 0;
+    width: auto;
+  }
+
+  ul {
+    > li {
+      float: left;
+      padding: 5px 0;
+      width: 100%;
+
+      @include grid-media($lg) {
+        padding: 0;
+        width: auto;
+      }
+
+      &.has-submenu {
+        @include grid-media($lg) {
+          &:hover,
+          &:focus {
+            > a {
+              background: $green;
+              color: $white;
+            }
+          }
+        }
+
+        > a {
+          position: relative;
+
+          &:before {
+            border-bottom: 5px solid transparent;
+            border-left: 9px solid $white;
+            border-top: 5px solid transparent;
+            content: '';
+            height: 0;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            transform: rotate(0);
+            transition: all 0.5s $cubic-transition-2;
+            width: 0;
+
+            @include grid-media($lg) {
+              display: none;
+            }
+          }
+        }
+
+        &.active {
+          > a {
+            &:before {
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        @include grid-media($lg) {
+          > a {
+            background: none;
+          }
+        }
+      }
+
+      > a {
+        float: left;
+        height: 45px;
+        padding-right: 30px;
+        position: relative;
+
+        @include type-custom($color: $white, $font-family: $sans-stack, $font-weight: $font-bold, $font-size: 16px, $line-height: 2.5);
+
+        @include grid-media($lg) {
+          padding: 0 15.5px;
+
+          @include type-custom($color: $gray, $font-family: $sans-stack, $font-weight: $font-bold, $font-size: 13px, $line-height: 3.5);
+
+          &:hover,
+          &:focus {
+            background: $green;
+            color: $white;
+          }
+        }
+      }
+
+      > ul {
+        > li {
+          display: block;
+
+          > a {
+            height: auto;
+            padding: 0;
+            text-transform: none;
+
+            @include type-custom($color: $white, $font-family: $sans-stack, $font-weight: $font-bold, $font-size: 13px, $line-height: 1.5);
+          }
+        }
+
+        @include grid-media($lg) {
+          background: $green;
+          display: none;
+          position: absolute;
+          top: 40px;
+
+          > li {
+            width: 100%;
+
+            > a {
+              min-height: 30px;
+              padding: 5px 15px;
+              text-transform: none;
+
+              &:hover,
+              &:focus {
+                color: $gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include grid-media($lg) {
+    ul > li > a:hover + .main-nav-dropdown,
+    .main-nav-dropdown:hover {
+      display: block;
+    }
+  }
+}
+
+.main-nav-dropdown {
+  display: none;
+  width: 100%;
+
+  @include grid-media($lg) {
+    max-width: 160px;
+    padding: 8px 0;
+  }
+}
+
+.c-nav__mobile {
+  float: right;
+  margin-top: 18px;
+
+  @include grid-media($lg) {
+    display: none;
+  }
+}
+
+input.c-nav__search {
+  background: url('/wp-content/themes/emergeamerica/assets/img/icons/icon-search--white.png') left center no-repeat;
+  border: none;
+  border-bottom: 1px solid $white;
+  padding-left: 30px;
+  text-transform: uppercase;
+
+  @include grid-column(12, $no-gutter);
+  @include type-custom($color: $white, $font-family: $headlines, $font-weight: $font-semibold, $font-size: 14px, $line-height: 1.2);
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.c-nav__mobile-hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 15px;
+  transform: rotate(0);
+  transition: all 0.5s $cubic-transition-2;
+
+  &.active {
+    .icon-bar {
+      background: $white;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        top: -14px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.icon-bar {
+  background: $black;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: all 0.5s $cubic-transition-2;
+  width: 22px;
+
+  + .icon-bar {
+    margin-top: 4px;
+  }
+}
