@@ -12,10 +12,14 @@ body {
 }
 
 body {
-  background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+  background: $cod_gray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: $oxanium;
+    font-weight: $font-normal;
+    font-size: 14px;
+    color: $white;
 }
 
 img {

@@ -26,11 +26,22 @@ class Grid extends Component {
        
 
         return (
-               <div className="row">
-    <Col className={'col-6'}>
-    sdfsdfsdf
+
+
+
+<div class="container">
+  <div class="row">
+      <Col className={'col-sm'}>
+      One of three columns
     </Col>
-    </div>
+    <Col className={'col-sm'}>
+      One of three columns
+    </Col>
+    <Col className={'col-sm'}>
+      One of three columns
+    </Col>
+  </div>
+</div>
         );
     }
 }
