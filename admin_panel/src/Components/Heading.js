@@ -9,37 +9,37 @@ class Headings extends Component {
         switch (h) {
             case 1:
                 return (
-                    <h1>{this.props.children}</h1>
+                    <h1 className={'app-007__heading'}>{this.props.children}<span>&nbsp;</span></h1>
                 );
                 break;
 
             case 2:
                 return (
-                    <h2>{this.props.children}</h2>
+                    <h2  className={'app-007__heading'}>{this.props.children} <span>&nbsp;</span></h2>
                 );
                 break;
 
             case 3:
                 return (
-                    <h3>{this.props.children}</h3>
+                    <h3  className={'app-007__heading'}>{this.props.children} <span>&nbsp;</span></h3>
                 );
                 break;
 
             case 4:
                 return (
-                    <h4>{this.props.children}</h4>
+                    <h4  className={'app-007__heading'}>{this.props.children} <span>&nbsp;</span></h4>
                 );
                 break;
 
             case 5:
                 return (
-                    <h5>{this.props.children}</h5>
+                    <h5  className={'app-007__heading'}>{this.props.children} <span>&nbsp;</span></h5>
                 );
                 break;
 
             case 6:
                 return (
-                    <h6>{this.props.children}</h6>
+                    <h6  className={'app-007__heading'}>{this.props.children} <span>&nbsp;</span></h6>
                 );
                 break;
                 default :

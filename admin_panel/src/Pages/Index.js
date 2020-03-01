@@ -16,12 +16,12 @@ class Index extends Component {
         return (
 <Fragment>
 <Grid/>
-<Heading h={1}>Test</Heading>
-<Heading h={2}>Test</Heading>
-<Heading h={3}>Test</Heading>
-<Heading h={4}>Test</Heading>
-<Heading h={5}>Test</Heading>
-<Heading h={6}>Test</Heading>
+<Heading h={1}>Hello World Animation.....!!</Heading>
+<Heading h={2}>Hello World Animation.....!!</Heading>
+<Heading h={3}>Hello World Animation.....!!</Heading>
+<Heading h={4}>Hello World Animation.....!!</Heading>
+<Heading h={5}>Hello World Animation.....!!</Heading>
+<Heading h={6}>Hello World Animation.....!!</Heading>
 
 {/* Alerts */}
 
