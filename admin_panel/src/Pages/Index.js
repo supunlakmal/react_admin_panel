@@ -16,7 +16,13 @@ class Index extends Component {
         return (
 <Fragment>
 <Grid/>
-<Heading/>
+<Heading h={1}>Test</Heading>
+<Heading h={2}>Test</Heading>
+<Heading h={3}>Test</Heading>
+<Heading h={4}>Test</Heading>
+<Heading h={5}>Test</Heading>
+<Heading h={6}>Test</Heading>
+
 {/* Alerts */}
 
 
