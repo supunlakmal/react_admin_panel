@@ -1,1 +1,8 @@
 // MIXINS
+
+@mixin alert($color) {
+          background: linear-gradient(0deg, rgba($color, 0.3) 0%, rgba(17, 17, 17, 0) 100%);
+    border: 1px solid $color;
+    animation: entrance 400ms 800ms linear backwards 1;
+    color: $color; 
+}

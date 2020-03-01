@@ -8,7 +8,7 @@ class Alert extends Component {
 
              let { className } = this.props;
         return (
-           <div class={`alert ${className}`} role="alert">
+           <div class={`app-007__alert alert ${className}`} role="alert">
            {this.props.children}
 </div>
         );

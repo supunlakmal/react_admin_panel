@@ -1,7 +1,8 @@
 import React, { Component,Fragment } from "react";
 
 import Grid from '../Pages/Layout/Grid/Grid';
-import Headings  from  '../Components/Headings';
+import Heading  from  '../Components/Heading';
+import Alert from '../Components/Alert';
 
 class Index extends Component {
 
@@ -15,7 +16,47 @@ class Index extends Component {
         return (
 <Fragment>
 <Grid/>
-<Headings/>
+<Heading/>
+{/* Alerts */}
+
+
+<Alert className={'alert-primary'}>
+    test
+</Alert>
+
+<Alert className={'alert-secondary'}>
+    test
+</Alert>
+
+
+<Alert className={'alert-success'}>
+    test
+</Alert>
+
+
+<Alert className={'alert-danger'}>
+    test
+</Alert>
+
+
+<Alert className={'alert-warning'}>
+    test
+</Alert>
+
+
+
+<Alert className={'alert-info'}>
+    test
+</Alert>
+
+<Alert className={'alert-light'}>
+    test
+</Alert>
+
+<Alert className={'alert-dark'}>
+    test
+</Alert>
+
 
 </Fragment>
         );
