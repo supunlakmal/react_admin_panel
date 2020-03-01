@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 //Layout
-import Grid from './Pages/Layout/Grid/Grid';
-
+//import Grid from './Pages/Layout/Grid/Grid';
+import Index  from "./Pages/Index";
 
 
 class App extends Component {
@@ -12,11 +12,15 @@ class App extends Component {
     return (
       <Router >
 
-                 <Switch>   
+                 <Switch>  
 
-            <Route exact path="/layout/grid/">
+                               <Route exact path="/">
+              <Index />
+            </Route> 
+
+            {/* <Route exact path="/layout/grid/">
               <Grid />
-            </Route>
+            </Route> */}
 
 
 
