@@ -42,6 +42,12 @@ class Headings extends Component {
                     <h6>{this.props.children}</h6>
                 );
                 break;
+                default :
+
+                      return (
+                    <span>{this.props.children}</span>
+                );
+                break;
 
         }
 
