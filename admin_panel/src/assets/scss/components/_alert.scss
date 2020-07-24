@@ -1,0 +1,45 @@
+.app-007
+{&__alert{
+
+&.alert-primary {
+
+
+    @include alert(#004085);
+
+}
+
+&.alert-secondary {
+      @include alert($iron);
+}
+    
+    &.alert-success {
+  @include alert($parsley);
+    }
+
+
+    &.alert-danger {
+          @include alert(#721c24);  
+    }
+
+
+
+    &.alert-warning {
+              @include alert(#856404);  
+    }
+
+
+    &.alert-info {
+         @include alert(#0c5460);  
+    }
+
+
+
+    &.alert-light{
+         @include alert(#818182);  
+    }
+
+    &.alert-dark {
+          @include alert(#d6d8d9);  
+    }
+
+}}

@@ -1,0 +1,135 @@
+// COLORS
+$white:#fff;
+$cod_gray: #1e1e1e;
+$chathams_blue :#174069;
+$onahau : #cce5ff;
+$iron:#e2e3e5;
+$parsley:#155724;
+
+// FONT WEIGHTS
+$font-thinnest: 100;
+$font-thinner: 200;
+$font-thin: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// TRANSITIONS
+$cubic-transition: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+$cubic-transition-2: cubic-bezier(0, 0, 0.2, 1);
+
+// BREAKPOINTS
+
+// Lower boundaries
+$screen-xs-min: 576px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 1024px !default;
+$screen-lg-min: 1440px !default;
+$screen-xl-min: 1920px !default;
+
+// Upper boundaries
+$screen-xs-max: $screen-sm-min - 1px !default;
+$screen-sm-max: $screen-md-min - 1px !default;
+$screen-md-max: $screen-lg-min - 1px !default;
+$screen-lg-max: $screen-xl-min - 1px !default;
+
+// Custom neat grids:
+
+// Mobile
+$xs: (
+  columns: 12,
+  gutter: 15px,
+  media: $screen-xs-min
+);
+
+$xs-only: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (min-width: #{$screen-xs-min}) and (max-width: #{$screen-xs-max})'
+);
+
+$xs-max: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (max-width: #{$screen-xs-max})'
+);
+
+// Tablet
+$sm: (
+  columns: 12,
+  gutter: 15px,
+  media: $screen-sm-min
+);
+
+$sm-only: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})',
+);
+
+$sm-max: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (max-width: #{$screen-sm-max})',
+);
+
+// Desktop
+$md: (
+  columns: 12,
+  gutter: 15px,
+  media: $screen-md-min
+);
+
+$md-only: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})'
+);
+
+$md-max: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (max-width: #{$screen-md-max})'
+);
+
+// Desktop Large
+$lg: (
+  columns: 12,
+  gutter: 154px,
+  media: $screen-lg-min
+);
+
+$lg-only: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})'
+);
+
+$lg-max: (
+  columns: 12,
+  gutter: 15px,
+  media: 'only screen and (max-width: #{$screen-lg-max})'
+);
+
+// Desktop Extra Large
+$xl: (
+  columns: 12,
+  gutter: 15px,
+  media: $screen-xl-min
+);
+
+// Print
+$media-print: (
+  columns: 12,
+  gutter: .25in,
+  media: 'only print'
+);
+
+// CONTAINER SIZES
+$container-width: 1230px;
+$container-small: 900px;
+
+// GRIDS
+$neat-grid: (columns: 12, gutter: 15px);
+$no-gutter: (gutter: 0);

@@ -1,0 +1,10 @@
+.app-007{
+    &__col {
+    background: linear-gradient(0deg, rgba($chathams_blue, 0.3) 0%, rgba(17, 17, 17, 0) 100%);
+    border: 1px solid $chathams_blue;
+    // border-radius: 5px;
+    -webkit-animation: entrance 400ms 800ms linear backwards 1;
+    animation: entrance 400ms 800ms linear backwards 1;  
+
+}
+}

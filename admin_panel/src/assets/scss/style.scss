@@ -1,0 +1,35 @@
+
+// Neat Bourbon
+@import "~bourbon/core/bourbon";
+@import "~bourbon-neat/core/neat";
+
+// Settings
+// Used with preprocessors and contain font, colors definitions, etc.
+// =====================
+@import "settings/variables";
+@import "settings/fonts";
+
+// Generic
+// Reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+//@import "generic/reset";
+@import "generic/utilities";
+
+// Tools
+// Globally used mixins and functions
+@import "tools/typography";
+@import "tools/layout";
+@import "tools/mixins";
+
+// Components
+// Specific UI components
+
+@import "components/col";
+@import "components/alert";
+@import "components/heading";
+
+
+// Vendor Styles
+// Styles included with plugins, etc
+// ======================
+// @import "vendor/slick";
+

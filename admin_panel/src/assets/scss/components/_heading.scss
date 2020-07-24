@@ -1,0 +1,26 @@
+.app-007 {
+    &__heading{
+        position: relative;
+    width: 100%;
+
+    span{
+	position: absolute;
+	top: 0;
+	right: 15px;
+	width: 10%;
+background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+	animation: typing 3s steps(16) forwards,
+						 cursor 1s infinite;
+}
+    }
+}
+
+
+
+/* Animation */
+
+
+@keyframes typing{
+	from{ width: 100%;}
+	to{ width: 0;}
+}
