@@ -1,0 +1,57 @@
+// LAYOUT
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-top: 45px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 15px;
+
+  @include grid-container;
+
+  &--small {
+    max-width: $container-small;
+  }
+}
+
+.content-grid {
+  margin: 0 auto;
+  position: relative;
+
+  @include grid-container;
+}
+
+.row {
+  @include grid-media($md) {
+    @include grid-collapse;
+    @include grid-container;
+  }
+}
+
+section {
+  margin: 40px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include grid-container;
+}
